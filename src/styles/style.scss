@@ -1,0 +1,47 @@
+:root {
+  // Typography
+  --base-font-size: 16px;
+  --main-font: 'Inter';
+  --headings-font: 'Inter';
+  --text: #333; // #3c4257;
+  --text-heading: var(--text);
+  --text-link: var(--text);
+  --text-dim: #697386;
+  --text-placeholder: var(--text-dim);
+
+  // Layout
+  --container-width: 750px;
+  // Main Colors
+  --main-bg: #faf4e9;
+  --header-bg: white;
+  --subnav-bg: #fafaf9;
+  --footer-bg: #1a202a;
+  // Elements Colors
+  --post-bg: white;
+  --modal-bg: var(--post-bg);
+  --post-footer-bg: #fafafa;
+  --tag-bg: #e0e6ef;
+  --panel-bg: #e0e6ef;
+  --quote-bg: #fcf2ef; // #fafafa;
+  --quote-border: #ff6600;
+  --code-bg: #eeecef;
+  // Small Elements
+  --btn-bg: white;
+  --btn-bg-hover: #eee;
+  --btn-cta: #ff6600;
+  --border: #e3e8ee;
+  --border-dim: #f6f7f8;
+  --border-radius: 5px;
+  --input-bg: white;
+  --scrollbar-thumb: rgba(110, 110, 110, 0.2);
+  // Common
+  --box-shadow: 0 0 2px 0px rgb(0 0 0 / 20%);
+}
+
+@import './_fonts.scss';
+@import './_reset.scss';
+@import './_helpers.scss';
+@import './_global.scss';
+@import './_layout.scss';
+@import './_typography.scss';
+@import './_elements.scss';

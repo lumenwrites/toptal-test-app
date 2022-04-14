@@ -1,0 +1,179 @@
+.text {
+  a {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    max-height: 500px; // for tall narrow images
+    margin: auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 1em;
+  color: var(--text-heading);
+  & + p,
+  & + ul,
+  & + img,
+  & + blockquote,
+  & + * {
+    // first pagagraph after the header
+    margin-top: 10px;
+  }
+}
+h1,
+h2 {
+  text-align: center;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--headings-font);
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.563rem;
+  margin-top: 1.563rem; // same as line height
+  @media (max-width: 740px) {
+    line-height: 1.438em;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.333rem;
+  @media (max-width: 740px) {
+    font-size: 2rem;
+    line-height: 1.344rem;
+  }
+}
+
+h2 {
+  font-size: 2.25rem;
+  line-height: 1.361rem;
+  @media (max-width: 740px) {
+    font-size: 1.625rem;
+    line-height: 1.346rem;
+  }
+}
+
+h3 {
+  font-size: 1.75rem;
+  line-height: 1.393rem;
+  @media (max-width: 740px) {
+    font-size: 1.375rem;
+    line-height: 1.409rem;
+  }
+}
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  @media (max-width: 740px) {
+    font-size: 1.123rem;
+    line-height: 1.444rem;
+  }
+}
+
+a {
+  cursor: pointer;
+  color: var(--text-link);
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--text-link);
+  }
+  // svg path {
+  //   fill: var(--text-link);
+  // }
+}
+
+.post a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--text);
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+i,
+em {
+  font-style: italic;
+}
+ul {
+  padding: 0;
+  margin-top: 1em;
+  margin-left: 20px;
+}
+::marker {
+  font-size: 22px;
+  line-height: 0px;
+  content: '• ';
+}
+ol {
+  margin-top: 0.5em;
+}
+ol li {
+  margin-top: 0.2em;
+  margin-left: 1em;
+}
+// Magic that makes ordered list numbers left-aligned
+// https://stackoverflow.com/questions/33219983/left-align-ol-numbers-with-the-heading-in-the-same-column
+// ol {
+//   list-style: none;
+//   padding: 0;
+// }
+// ol li {
+//   counter-increment: step-counter;
+// }
+// ol li:before {
+//   content: counter(step-counter)". ";
+// }
+
+li p {
+  margin-top: 0; // Sometimes it creates <p> inside of the li elements for some reason
+}
+
+hr {
+  border: none;
+  margin: 4px 0 4px 0;
+  border-top: 1px solid var(--border);
+}
+
+blockquote {
+  border-left: 3px solid var(--quote-border);
+  background: var(--quote-bg);
+  margin-top: 1em;
+  padding: 10px;
+
+  :first-child {
+    margin-top: 0;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table,
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 10px;
+}
+thead {
+  background: #f1f8ff;
+}
+tbody tr:nth-child(even) {
+  background: #f6f8fa;
+}
